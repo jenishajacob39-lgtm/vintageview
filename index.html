@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vintage Viewer — Travel Back in Time</title>
+    <meta name="description"
+        content="Vintage Viewer is a time-travel map application. Select a location, choose a year, and view reconstructed historical footage." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- =============================================
+       NAVIGATION BAR
+       ============================================= -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⏳</span>
+                <span class="logo-text">Vintage Viewer</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#explore" class="nav-link">Explore</a></li>
+                <li><a href="#preview" class="nav-link">Timeline</a></li>
+                <li><a href="#footer" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =============================================
+       HERO SECTION
+       ============================================= -->
+    <section class="hero" id="hero">
+        <!-- Decorative overlay layers -->
+        <div class="hero-overlay"></div>
+        <div class="hero-grain"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">✦ EST. 2026 ✦</p>
+            <h1 class="hero-title">Travel Back in Time</h1>
+            <p class="hero-tagline">
+                Explore the world as it once was. Select any location on the globe,
+                choose a year, and witness history come alive through reconstructed footage.
+            </p>
+            <a href="#explore" class="btn btn-primary">
+                <span>Start Exploring</span>
+                <span class="btn-arrow">→</span>
+            </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-hint">
+            <span class="scroll-line"></span>
+            <span class="scroll-label">Scroll</span>
+        </div>
+    </section>
+
+    <!-- =============================================
+       INTERACTIVE MAP / EXPLORE SECTION
+       ============================================= -->
+    <section class="explore-section" id="explore">
+        <div class="section-container">
+
+            <!-- Section heading -->
+            <div class="section-header">
+                <p class="section-eyebrow">Explore</p>
+                <h2 class="section-title">Choose Your Destination</h2>
+                <div class="ornament-divider">
+                    <span class="orn-line"></span>
+                    <span class="orn-diamond">◆</span>
+                    <span class="orn-line"></span>
+                </div>
+            </div>
+
+            <div class="explore-grid">
+
+                <!-- Map Placeholder -->
+                <div class="map-container">
+                    <div class="map-frame">
+                        <div class="map-inner">
+                            <!-- Decorative compass -->
+                            <div class="compass-rose">
+                                <span class="compass-n">N</span>
+                                <span class="compass-ring">✦</span>
+                                <span class="compass-s">S</span>
+                            </div>
+                            <p class="map-label">Interactive World Map</p>
+                            <p class="map-sublabel">Click any location to select</p>
+
+                            <!-- Decorative map grid lines -->
+                            <div class="map-gridlines"></div>
+
+                            <!-- Sample location pins -->
+                            <div class="pin pin-1" title="Paris, France">
+                                <span class="pin-dot"></span>
+                                <span class="pin-tooltip">Paris</span>
+                            </div>
+                            <div class="pin pin-2" title="Rome, Italy">
+                                <span class="pin-dot"></span>
+                                <span class="pin-tooltip">Rome</span>
+                            </div>
+                            <div class="pin pin-3" title="New York, USA">
+                                <span class="pin-dot"></span>
+                                <span class="pin-tooltip">New York</span>
+                            </div>
+                            <div class="pin pin-4" title="Cairo, Egypt">
+                                <span class="pin-dot"></span>
+                                <span class="pin-tooltip">Cairo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year Selector Panel -->
+                <div class="controls-panel">
+
+                    <div class="control-card">
+                        <h3 class="control-label">Select Year</h3>
+                        <div class="year-display">
+                            <span class="year-number">1950</span>
+                        </div>
+                        <div class="slider-wrapper">
+                            <input type="range" class="year-slider" id="year" min="1800" max="2020" value="1950" />
+                            <div class="slider-range-labels">
+                                <span>1800</span>
+                                <span>1900</span>
+                                <span>2020</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-card">
+                        <h3 class="control-label">Select Location</h3>
+                        <select class="location-select" id="location">
+                            <option value="" disabled selected>— Choose a City —</option>
+                            <option value="paris">Paris, France</option>
+                            <option value="rome">Rome, Italy</option>
+                            <option value="new-york">New York City, USA</option>
+                            <option value="london">London, England</option>
+                            <option value="cairo">Cairo, Egypt</option>
+                            <option value="tokyo">Tokyo, Japan</option>
+                            <option value="mumbai">Mumbai, India</option>
+                            <option value="berlin">Berlin, Germany</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-view-era">
+                        <span class="btn-icon">🎞️</span>
+                        <span>View Era</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       PREVIEW PANEL SECTION
+       ============================================= -->
+    <section class="preview-section" id="preview">
+        <div class="section-container">
+
+            <!-- Section heading -->
+            <div class="section-header">
+                <p class="section-eyebrow">Timeline</p>
+                <h2 class="section-title">Preview Window</h2>
+                <div class="ornament-divider">
+                    <span class="orn-line"></span>
+                    <span class="orn-diamond">◆</span>
+                    <span class="orn-line"></span>
+                </div>
+            </div>
+
+            <div class="preview-grid">
+
+                <!-- Info Cards -->
+                <div class="info-cards">
+                    <div class="info-card">
+                        <span class="info-icon">📍</span>
+                        <p class="info-label">Selected Location</p>
+                        <p class="info-value">Paris, France</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">📅</span>
+                        <p class="info-label">Selected Year</p>
+                        <p class="info-value">1950</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">🎬</span>
+                        <p class="info-label">Era</p>
+                        <p class="info-value">Post-War Europe</p>
+                    </div>
+                </div>
+
+                <!-- Footage Viewer Frame -->
+                <div class="footage-frame">
+                    <!-- Corner ornaments -->
+                    <span class="frame-corner corner-tl"></span>
+                    <span class="frame-corner corner-tr"></span>
+                    <span class="frame-corner corner-bl"></span>
+                    <span class="frame-corner corner-br"></span>
+
+                    <!-- Film overlays -->
+                    <div class="scanlines"></div>
+                    <div class="vignette"></div>
+
+                    <!-- Viewport content -->
+                    <div class="footage-viewport">
+                        <div class="footage-placeholder">
+                            <span class="fp-icon">🎞️</span>
+                            <p class="fp-title">Historical Footage Preview</p>
+                            <p class="fp-subtitle">Select a location &amp; year, then press "View Era"</p>
+                        </div>
+                    </div>
+
+                    <!-- Film strip label -->
+                    <div class="film-strip-label">
+                        <span>TIMELENS™ ARCHIVES</span>
+                        <span>◈ REEL 001 ◈</span>
+                        <span>FRAME ——</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       FOOTER
+       ============================================= -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+            <div class="ornament-divider">
+                <span class="orn-line"></span>
+                <span class="orn-diamond">◆</span>
+                <span class="orn-line"></span>
+            </div>
+            <p class="footer-brand">⏳ Vintage Viewer</p>
+            <p class="footer-copy">&copy; 2026 Vintage Viewer — All rights reserved</p>
+            <p class="footer-powered">Powered by <em class="timelens-brand">TimeLens</em> Technology</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
